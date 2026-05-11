@@ -1,0 +1,131 @@
+.filter-container {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.filter-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.filter-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff !important;
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.filter-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
+  transform: none !important;
+}
+.card small {
+  color: maroon;
+}
+
+.filter-card p {
+  color: #555;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.filter-card .form-label {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.filter-card .custom-input {
+  background-color: #7a0c0c !important;
+  color: #ffffff !important;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.filter-card .custom-input:hover,
+.filter-card .custom-input:focus {
+  background-color: #7a0c0c !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.filter-card select.custom-input option {
+  color: #000;
+}
+
+
+.info-box {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.info-icon {
+  font-size: 14px;
+}
+
+.btn-success {
+  background-color: #7a0c0c;
+  border: none;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #daa520 !important;
+  color: #ffffff;
+}
+
+.btn-success:focus {
+  background-color: #7a0c0c;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-success {
+  background-color: #7a0c0c !important;
+  border: none;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.btn-outline-secondary {
+  border: 1px solid #ccc;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #7a0c0c !important;
+  color: white !important;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: goldenrod !important;
+  color: white !important;
+  border-color: inherit !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@media (max-width: 480px) {
+  .filter-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,39 @@
+import React from "react";
+import david from "../../assets/Images/medium.jpg";
+import "../../assets/Style/Contactingg.css";
+
+const Contactingg = () => {
+  return (
+    <div className="container py-5 contact-section">
+      <div className="row g-4 align-items-center">
+        
+        <div className="col-md-6">
+          <h2 className="contactedhead text-center">Contact</h2>
+          <p className="contactedpara">
+            Whether you’re dreaming of experiencing an authentic wedding as a
+            guest, opening your own celebration to travelers from around the
+            world, or simply curious to learn more about how it all works, we’d
+            love to hear from you. Every message is a chance to connect cultures,
+            share traditions, and create meaningful memories that go far beyond
+            the ceremony itself.
+          </p>
+        </div>
+
+
+        <div className="col-md-6 text-center">
+          <img
+            src={david}
+            alt="David – Founder"
+            className="contact-img"
+          />
+          <h3 className="founder-name">David</h3>
+          <p className="founder-role">Founder</p>
+          <p className="founder-location">India</p>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default Contactingg;

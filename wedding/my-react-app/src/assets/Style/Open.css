@@ -1,0 +1,29 @@
+.host-banner {
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.join-overlay {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.join-content {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  max-width: 520px;
+  border-radius: 8px;
+}
+
+.join-content h2 {
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+  color: maroon;
+}
+.buttons {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}

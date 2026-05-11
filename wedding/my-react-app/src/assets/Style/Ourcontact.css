@@ -1,0 +1,28 @@
+
+
+.ourcontacthead {
+  font-family: "Poppins", sans-serif;
+  color: maroon !important;
+  text-align: center;
+}
+
+.ourcontact-para {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  text-align: start !important;
+  line-height: 1.8;
+  color: #555;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .ourcontacthead {
+    font-size: 26px;
+  }
+
+  .ourcontact-para {
+    font-size: 15px;
+  }
+}

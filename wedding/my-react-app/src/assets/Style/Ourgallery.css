@@ -1,0 +1,80 @@
+.ourgallery {
+  color: #800000 !important;
+  font-family: "Poppins", sans-serif;
+}
+
+.view {
+  background-color: #800000 !important;
+  color: #fff !important;
+  border-radius: 30px;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.view:hover {
+  background-color: #ff9933 !important;
+  color: #ffffff ;
+}
+
+.oursub {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #555555 !important; 
+  text-align: start;
+}
+
+.decor img {
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.wed1 img {
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.wed3 img {
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.wed2 img {
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.decor img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+}
+
+.wed1 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+}
+
+.wed2 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+}
+
+.wed3 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 104, 88, 0.15);
+}
+
+.ourgallery-section {
+  background-color: #F6E5D5;
+  padding: 40px 0;
+}

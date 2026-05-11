@@ -1,0 +1,94 @@
+.navbar {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.company-logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-nav .nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5a0000;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #800000;
+}
+
+.navbar-nav .nav-link.active {
+  color: maroon !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  background-color: #800000;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+.btn-outline-primary {
+  border-color: #800000 !important;
+  color: #800000 !important;
+  border-radius: 12px !important;
+}
+.btn-outline-primary:hover {
+  color: white !important;
+}
+.btn-outline-primary:hover {
+  background-color: goldenrod !important;
+  color: #fff;
+  border-color: goldenrod !important;
+}
+
+.btn-primary {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+  border-radius: 12px !important;
+}
+
+.btn-primary:hover {
+  background-color: goldenrod !important;
+  border-color: goldenrod !important;
+}
+
+.btn-danger {
+  background-color: #b00020;
+  border-color: #b00020;
+}
+
+.btn-danger:hover {
+  background-color: #8a0018;
+}
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .navbar-nav .nav-link::after {
+    display: none;
+  }
+}
