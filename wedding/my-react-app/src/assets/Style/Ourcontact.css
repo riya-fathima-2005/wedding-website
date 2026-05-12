@@ -14,7 +14,7 @@
 
 .contact-heading {
   text-align: center;
-  color: brown;
+  color: rgb(8, 6, 6);
   font-size: clamp(2rem, 2vw, 3rem);
   margin-bottom: 40px;
 }

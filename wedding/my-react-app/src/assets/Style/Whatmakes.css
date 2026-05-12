@@ -1,10 +1,10 @@
 .whatmakes {
-  color: #800000 !important;
+  color: #090606 !important;
 }
 
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #800000;
+  background-color: #080707;
   width: 100% !important;
   max-width: 400px;
   border-radius: 5px;

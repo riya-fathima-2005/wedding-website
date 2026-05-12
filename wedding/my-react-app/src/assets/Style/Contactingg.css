@@ -1,10 +1,13 @@
 .contact-section {
-  background-color: #ffffff;
+  background-color: #faeeee;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border: 1px solid black;
 }
 
 .contactedhead {
   font-family: "Poppins", sans-serif;
-  color: maroon !important;
+  color: rgb(15, 13, 13) !important;
   margin-bottom: 16px;
 }
 
@@ -30,7 +33,7 @@
   font-size: 22px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  color: maroon !important;
+  color: rgb(18, 15, 15) !important;
   margin-bottom: 4px;
 }
 

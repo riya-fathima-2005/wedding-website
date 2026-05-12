@@ -9,7 +9,7 @@
   font-size: 32px;
   font-family: "Poppins", sans-serif;
   margin-bottom: 40px;
-  color: #800000;
+  color: #0d0c0c;
 }
 
 .faq-list {
@@ -67,7 +67,7 @@
 }
 
 .faq-item:hover .faq-question {
-  color: #800000;
+  color: #0c0b0b;
 }
 
 @media (max-width: 768px) {

@@ -15,7 +15,7 @@
 .faq-title {
   margin-bottom: 30px;
   font-family: "Poppins", sans-serif;
-  color: #800000 !important;
+  color: #1a1818 !important;
 }
 
 .faq-columns {
@@ -32,7 +32,7 @@
 .faq-subtitle {
   font-size: 20px;
   margin-bottom: 15px;
-  color: #800000;
+  color: #110e0e;
   font-family: "Poppins", sans-serif;
 }
 
@@ -65,7 +65,7 @@
   transition: max-height 0.3s ease, padding 0.3s ease;
   padding: 0 12px;
   background-color: #f8f5f5;
-  border-left: 3px solid #800000;
+  border-left: 3px solid #100f0f;
   border-radius: 0 0 8px 8px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
@@ -83,7 +83,7 @@
 
 .faq-button {
   padding: 12px 30px;
-  background-color: #800000;
+  background-color: #1c1818;
   color: #fff;
   border: none;
   border-radius: 8px;

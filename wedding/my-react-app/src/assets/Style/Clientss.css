@@ -10,7 +10,7 @@
 }
 
 .client-card {
-    background:maroon;
+    background:rgb(36, 32, 32);
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;

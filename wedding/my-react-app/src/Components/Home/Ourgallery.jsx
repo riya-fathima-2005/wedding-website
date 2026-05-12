@@ -77,7 +77,7 @@ const Ourgallery = () => {
         <div className="text-center mt-5">
 
           <Link to="/gallery">
-            <button className="btn view" >
+            <button className="faq-button text-decoration-none btn-lg" >
               View Our Gallery
             </button>
           </Link>

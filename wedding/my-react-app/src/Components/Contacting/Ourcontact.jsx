@@ -92,7 +92,7 @@ function Ourcontact() {
                 ></textarea>
               </div>
 
-              <button type="submit" className="submit-pill">
+              <button type="submit" className="submit-pill faq-button text-decoration-none btn-lg">
                 Contact Us
               </button>
 
@@ -124,8 +124,6 @@ function Ourcontact() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

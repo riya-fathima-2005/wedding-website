@@ -1,5 +1,5 @@
 .costume-section {
- background: linear-gradient(135deg, #800000, #D4AF37);
+ background: linear-gradient(135deg, #100f0f, #D4AF37);
 
 }
 
@@ -42,7 +42,7 @@
 
 .button .btn {
     background-color: #ffffff;
-    color: maroon;
+    color: rgb(9, 8, 8);
     border-radius: 30px;
     font-size: 14px;
     transition: all 0.3s ease;

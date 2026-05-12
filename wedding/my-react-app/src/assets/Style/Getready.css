@@ -41,7 +41,7 @@
   display: inline-block;
   padding: 10px 28px;
   border-radius: 30px !important;
-  background-color: maroon;
+  background-color: rgb(3, 3, 3);
   color: #fff;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;

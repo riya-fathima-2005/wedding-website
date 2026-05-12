@@ -53,11 +53,11 @@ const Whychoose = () => {
                 <img
                   src={img}
                   alt={title}
-                  className="service-icon"
+                  className="service-icon  text-white"
                 />
               </div>
 
-              <div className="card-body">
+              <div className="card-body  text-white">
                 <h5 className="card-head text-white">{title}</h5>
                 <p className="card-para">{text}</p>
               </div>
