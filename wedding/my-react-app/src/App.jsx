@@ -17,7 +17,6 @@ import Subblog from "./Components/Subblog/Subblog";
 import Subblogss from "./Components/Subblogs/Subblogss";
 import Christianweds from "./Components/Celebrations/Choose";
 import Christians from "./Components/Celebrations/Celebrations";
-
 import Contacted from "./Components/Contacting/Contacted";
 import Howhost from "./Components/Host/Howhost";
 import Howtohost from "./Components/Howhost/Howtohost";

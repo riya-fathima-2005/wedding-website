@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import bannerImage from "../../assets/Images/freepik9.png";
+import bannerImage from"../../assets/Images/hoastpic.jpg"
 import "../../assets/Style/Getready.css";
 
 const GetYourGuests = () => {

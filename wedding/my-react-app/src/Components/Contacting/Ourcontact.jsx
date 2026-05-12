@@ -1,37 +1,133 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../assets/Style/Ourcontact.css";
+import Footer from "../Footer/Footer";
 
-const Ourcontact = () => {
+function Ourcontact() {
+
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    message: "",
+  });
+
+  // Handle input change
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Handle submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Get old data from localStorage
+    const existingData =
+      JSON.parse(localStorage.getItem("contactData")) || [];
+
+    // Add new form data
+    const updatedData = [...existingData, formData];
+
+    // Save to localStorage
+    localStorage.setItem("contactData", JSON.stringify(updatedData));
+
+    alert("Contact details saved successfully!");
+
+    // Clear form
+    setFormData({
+      fullname: "",
+      email: "",
+      message: "",
+    });
+  };
+
   return (
-    <div className="ourcontact-section">
-      <div className="container ">
-        <div className="row align-items-center">
-          <div className="col-md-12">
-            <h2 className="ourcontacthead">Our Mission</h2>
+    <div>
+      <div className="contact-wrapper was-validated">
 
-            <p className=" ourcontact-para">
-              Our mission is to create a meaningful bridge between the world and
-              the rich cultural heritage of Indian weddings. We believe that
-              celebrations are the heart of Indian culture — filled with vibrant
-              colors, music, traditions, rituals, spirituality, and the warmth
-              of togetherness.
-            
-              But many international travelers only get to see these moments
-              through screens or from a distance. We want to change that.
-          
-              We are here to transform travel into a deep cultural connection —
-              welcoming global guests to step inside real Indian wedding
-              ceremonies, not as tourists, but as cherished family.
-         
-              From Haldi to Sangeet, from royal Baraats to emotional Varmala and
-              sacred Pheras, we give every visitor the opportunity to be part of
-              authentic memories, rituals, and happiness.
-            </p>
+        <h1 className="contact-heading">
+          <b>Contact Us</b>
+        </h1>
+
+        <div className="contact-container">
+          <div className="contact-grid">
+
+            {/* Left Side: Form */}
+            <form className="contact-form" onSubmit={handleSubmit}>
+
+              <div className="input-group">
+                <label>Full Name</label>
+
+                <input
+                  type="text"
+                  name="fullname"
+                  value={formData.fullname}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="input-group">
+                <label>E-mail</label>
+
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="input-group">
+                <label>Message</label>
+
+                <textarea
+                  rows="3"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" className="submit-pill">
+                Contact Us
+              </button>
+
+            </form>
+
+            {/* Right Side */}
+            <div className="contact-info">
+
+              <div className="info-block">
+                <h3>Contact</h3>
+                <p>purewed@gmail.com</p>
+              </div>
+
+              <div className="info-block">
+                <h3>Based in</h3>
+                <p>
+                  Wedding Events,
+                  <br />
+                  and programs
+                </p>
+              </div>
+
+              <div className="social-icons">
+                {/* Icons */}
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
-};
+}
 
 export default Ourcontact;
