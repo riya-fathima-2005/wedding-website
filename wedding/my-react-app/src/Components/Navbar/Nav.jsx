@@ -51,12 +51,18 @@ const Nav = ({ user, logout }) => {
                 CONTACT
               </NavLink>
             </li>
+             <li className="nav-item">
+              <NavLink to="/about" className="nav-link">
+                ABOUT US
+              </NavLink>
+            </li>
 
             <li className="nav-item">
               <NavLink to="/host" className="nav-link">
                 BECOME A HOST
               </NavLink>
             </li>
+            
           </ul>
 
           {!user ? (

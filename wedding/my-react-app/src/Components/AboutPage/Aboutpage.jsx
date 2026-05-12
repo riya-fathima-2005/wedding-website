@@ -9,8 +9,8 @@ import Ourvision from './Ourvision'
 const Aboutpage = () => {
   return (
     <div>
-      <About/>
       <Aboutimg/>
+      <About/>
       <Ourmission/>
       <Whatwedo/>
       <Whychoose/>

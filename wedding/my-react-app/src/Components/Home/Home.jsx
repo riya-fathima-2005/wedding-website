@@ -15,12 +15,12 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <Num />
-      <Aboutsec />
+      <Num /> 
       <Recently />
       {/* <Upcoming /> */}
       {/* <Costumes /> */}
       <Whychoose />
+       {/* <Aboutsec /> */}
       <Ourgallery />
       <Faq/>
       <Wantwelcome/>

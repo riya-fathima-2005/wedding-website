@@ -33,7 +33,7 @@ const Whychoose = () => {
   return (
     <div className="container py-5">
 
-      <h2 className="text-center  mb-3 whychoose">
+      <h2 className="text-center  mb-3 mt-4  whychoose">
         Why Choose Us
       </h2>
 
