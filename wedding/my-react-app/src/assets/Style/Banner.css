@@ -22,7 +22,7 @@
 }
 
 /* IMAGE ZOOM */
-
+/* 
 @keyframes zoomEffect {
 
   from {
@@ -33,7 +33,7 @@
     transform: scale(1.08);
   }
 
-}
+} */
 
 /* =========================
    DARK OVERLAY
@@ -183,7 +183,7 @@
 }
 
 .carousel-indicators .active {
-  opacity: 1;
+  opacity: 1; 
   transform: scale(1.2);
 }
 

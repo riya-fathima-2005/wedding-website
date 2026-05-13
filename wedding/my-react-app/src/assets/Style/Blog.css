@@ -44,7 +44,7 @@
 }
 
 .faq-button:hover {
-  background-color: goldenrod;
+  background-color: rgb(47, 42, 44);
   color: #fff;
   transform: translateY(-2px);
 }
