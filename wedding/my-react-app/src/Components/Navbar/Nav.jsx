@@ -1,18 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/Images/weds-mar - Edited.png";
+import logo from "../../assets/Images/logo.png";
 import "../../assets/Style/Nav.css";
 
 const Nav = ({ user, logout }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-2">
-      <div className="container py-3">
+    <nav
+      className={`navbar navbar-expand-lg fixed-top navbar-custom ${
+        scrolled ? "navbar-scrolled" : "navbar-transparent"
+      }`}
+    >
+      <div className="container">
+
+        {/* LOGO */}
         <NavLink to="/" className="navbar-brand">
           <img src={logo} alt="Company Logo" className="company-logo" />
         </NavLink>
 
+        {/* MOBILE TOGGLE */}
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0 shadow-none"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navMenu"
@@ -20,8 +43,12 @@ const Nav = ({ user, logout }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* NAVBAR MENU */}
         <div className="collapse navbar-collapse" id="navMenu">
-          <ul className="navbar-nav mx-auto gap-3 align-items-center">
+
+          {/* NAV LINKS */}
+          <ul className="navbar-nav mx-auto gap-lg-4 text-center">
+
             <li className="nav-item">
               <NavLink to="/" className="nav-link">
                 HOME
@@ -51,7 +78,8 @@ const Nav = ({ user, logout }) => {
                 CONTACT
               </NavLink>
             </li>
-             <li className="nav-item">
+
+            <li className="nav-item">
               <NavLink to="/about" className="nav-link">
                 ABOUT US
               </NavLink>
@@ -62,34 +90,55 @@ const Nav = ({ user, logout }) => {
                 BECOME A HOST
               </NavLink>
             </li>
-            
+
           </ul>
 
+          {/* AUTH BUTTONS */}
           {!user ? (
-            <div className="d-flex gap-2">
+            <div className="d-flex gap-3 auth-buttons">
+
               <NavLink
                 to="/login"
-                className="btn btn-outline-primary px-4 auth-btn animate__animated animate__bounce" > 
+                className="btn signup-btn px-4 "
+              >
                 Login
               </NavLink>
 
-              <NavLink to="/sign" className="btn btn-primary px-4 auth-btn animate__animated animate__bounce">
+              <NavLink
+                to="/sign"
+                className="btn signup-btn px-4"
+              >
                 Sign Up
               </NavLink>
+
             </div>
           ) : (
-            <div className="d-flex gap-2">
-              <NavLink to="/dashboard" className="btn btn-outline-primary px-4">
+            <div className="d-flex gap-2 auth-buttons">
+
+              <NavLink
+                to="/dashboard"
+                className="btn login-btn px-4"
+              >
                 Dashboard
               </NavLink>
-              <NavLink to="/profile" className="btn btn-outline-secondary px-4">
+
+              <NavLink
+                to="/profile"
+                className="btn login-btn px-4"
+              >
                 Profile
               </NavLink>
-              <button className="btn btn-danger px-4" onClick={logout}>
+
+              <button
+                className="btn signup-btn px-4"
+                onClick={logout}
+              >
                 Logout
               </button>
+
             </div>
           )}
+
         </div>
       </div>
     </nav>

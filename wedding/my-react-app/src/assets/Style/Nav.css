@@ -1,117 +1,193 @@
+/* =========================
+   NAVBAR MAIN
+========================= */
+
 .navbar {
-  background-color: #ffffff;
   font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease;
+  padding: 16px 0;
+  z-index: 999;
 }
 
+/* =========================
+   TRANSPARENT NAVBAR
+========================= */
+
+.navbar-transparent {
+  background: rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: none !important;
+}
+
+/* =========================
+   SCROLLED NAVBAR
+========================= */
+
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.92) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   LOGO
+========================= */
+
 .company-logo {
-  height: 40px;
+  height: 55px;
   width: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.navbar-nav {
+  align-items: center;
 }
 
 .navbar-nav .nav-link {
-  font-size: 14px;
-  font-weight: 500;
-  color: #0a0808;
-  letter-spacing: 1px;
-  padding: 8px 12px;
+  color: white !important;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 8px 10px;
   position: relative;
-  transition: color 0.3s ease;
-  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
 }
+
+/* HOVER */
 
 .navbar-nav .nav-link:hover {
-  color: #800000;
+  color: #836f76 !important;
 }
 
+/* ACTIVE */
+
 .navbar-nav .nav-link.active {
-  color: rgb(6, 5, 5) !important;
-  font-weight: 600;
+  color: #e9e1e4 !important;
 }
+
+/* UNDERLINE EFFECT */
 
 .navbar-nav .nav-link::after {
   content: "";
   position: absolute;
-  width: 0;
+  width: 0%;
   height: 2px;
-  left: 50%;
-  bottom: 0;
-  background-color: #800000;
-  transition: all 0.3s ease;
+  left: 0;
+  bottom: -3px;
+  background: #ff4f93;
+  transition: 0.4s ease;
 }
 
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
   width: 100%;
-  left: 0;
 }
 
-/* LOGIN BUTTON */
-.btn-outline-primary {
-  background-color: white !important;
-  border: 2px solid #800000 !important;
-  color: #800000 !important;
-  border-radius: 12px !important;
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn {
+  background: transparent !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 700 !important;
   transition: 0.3s ease;
 }
 
-.btn-outline-primary:hover {
-  background-color: goldenrod !important;
-  border-color: goldenrod !important;
+.login-btn:hover {
+  color: #443d40 !important;
+}
+
+/* =========================
+   SIGNUP BUTTON
+========================= */
+
+.signup-btn {
+  background: linear-gradient(135deg, #ab9c9c, #222) !important;
+  border: none !important;
   color: white !important;
-}
-
-.btn-outline-primary:focus,
-.btn-outline-primary:active {
-  background-color: rgb(221, 217, 217) !important;
-  border-color: #800000 !important;
-  color: #800000 !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* SIGNUP BUTTON */
-.btn-primary {
-  background-color: #faf9f9 !important;
-  border-color: #800000 !important;
   border-radius: 12px !important;
-  color: rgb(135, 3, 3) !important;
+  padding: 10px 24px !important;
+  font-weight: 700 !important;
   transition: 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: goldenrod !important;
-  border-color: goldenrod !important;
+.signup-btn:hover {
+  background: linear-gradient(135deg, #474144, #3b3437) !important;
+  transform: translateY(-2px);
 }
 
-.btn-primary:focus,
-.btn-primary:active {
-  background-color: #800000 !important;
-  border-color: #800000 !important;
-  color: white !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
+/* =========================
+   LOGOUT BUTTON
+========================= */
 
 .btn-danger {
-  background-color: #b00020;
-  border-color: #b00020;
+  background: #987482 !important;
+  border: none !important;
+  border-radius: 12px !important;
 }
 
 .btn-danger:hover {
-  background-color: #8a0018;
-}
-.animate__animated.animate__bounce {
-  --animate-duration: 2s;
+  background: #746a6e !important;
 }
 
+/* =========================
+   TOGGLER
+========================= */
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+/* WHITE HAMBURGER ICON */
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
 @media (max-width: 991px) {
-  .navbar-nav {
-    text-align: center;
+
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 30px;
     margin-top: 20px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .navbar-nav {
+    gap: 18px;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+    font-size: 16px;
   }
 
   .navbar-nav .nav-link::after {
     display: none;
+  }
+
+  .auth-buttons {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .company-logo {
+    height: 48px;
   }
 }
