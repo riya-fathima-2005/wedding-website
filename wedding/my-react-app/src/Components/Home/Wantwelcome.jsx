@@ -10,8 +10,9 @@ const Wantwelcome = () => {
       </h2>
 
       <p className="text-center want-para">
-        If sharing your wedding joy with international travelers who truly value
-        Indian traditions excites you, we’d love to connect with you.
+        If you dream of sharing your special day with people from around the
+        world who value authentic Indian traditions, we’d love to be part of
+        your journey.
       </p>
 
       <div className="text-center py-3">

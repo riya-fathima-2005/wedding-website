@@ -20,6 +20,7 @@ import Christians from "./Components/Celebrations/Celebrations";
 import Contacted from "./Components/Contacting/Contacted";
 import Howhost from "./Components/Host/Howhost";
 import Howtohost from "./Components/Howhost/Howtohost";
+import Venue from "./Components/Venue/Venue";
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
         <Route path="/howhost" element={<Howtohost />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign" element={<Sign />} />
+         <Route path="/venue" element={<Venue />} />
+
       </Routes>
       <Footer />
     </>

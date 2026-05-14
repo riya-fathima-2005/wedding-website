@@ -60,6 +60,12 @@ const Nav = ({ user, logout }) => {
                 WEDDING
               </NavLink>
             </li>
+              <li className="nav-item">
+              <NavLink to="/venue" className="nav-link">
+                VENUE
+              </NavLink>
+            </li>
+
 
             <li className="nav-item">
               <NavLink to="/blog" className="nav-link">

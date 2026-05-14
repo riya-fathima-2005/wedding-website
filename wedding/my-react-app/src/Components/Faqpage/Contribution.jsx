@@ -2,28 +2,55 @@
 import React, { useState } from "react";
 
 const faqData = [
+
   {
-    question: "What can I purchase on Pure Wedding.com?",
-    answer:"On Pure Wedding.com, you can book unique experiences related to attending authentic weddings around the world. This includes tickets or passes to join real wedding celebrations hosted by couples, cultural events tied to the weddings, and optional travel or hospitality add-ons (like local tours or meals) depending on the host’s offerings. It’s designed to help you be part of meaningful celebrations while experiencing local traditions and making new connections.",
+    question: "Do international guests need a visa to visit India?",
+    answer:
+      "Yes, most international travelers require a valid visa to enter India. Guests can apply for an e-Visa online before travel. We recommend checking the official Indian immigration website for the latest visa requirements based on your country.",
   },
 
   {
-    question: "What does the contribution include?",
+    question: "How long does it take to get an Indian e-Visa?",
     answer:
-    "Your contribution typically includes access to the wedding celebration and related events as defined by the host. This can cover things like attending the ceremony and reception, participation in cultural experiences, food and refreshments provided during the event, and any special activities outlined in the listing. Exact inclusions may vary from wedding to wedding, so you’ll see full details when you book each experience.",
+      "Indian e-Visas are usually processed within 3–7 business days. However, we strongly recommend applying at least 2–3 weeks before your travel date to avoid delays.",
   },
 
   {
-    question: "How does the booking process look like?",
+    question: "What is the best weather season for weddings in India?",
     answer:
-      "The booking process is simple and transparent. You start by browsing available weddings on JoinMyWedding.com and selecting an experience that interests you. Each listing includes details about the events, dates, location, and what’s included. Once you choose a wedding, you submit your booking and complete the payment online. After confirmation, you’ll receive all necessary information from the host, including event schedules and any guidelines to help you prepare. From there, you just plan your travel and get ready to celebrate.",
+      "The best wedding season in India is typically from October to March, when the weather is cooler and more comfortable across most regions. Summer months can be hot, while monsoon season varies depending on location.",
   },
-  
-    {
-    question: "Where does the contribution go?",
+
+  {
+    question: "What currency is used in India?",
     answer:
-      "The contribution goes primarily to the wedding hosts to help cover the costs of welcoming additional guests, such as food, venue arrangements, and cultural activities. A portion is also used to support the operation of Pure Wedding.com, including platform maintenance, secure payments, and customer support. This ensures a fair and transparent experience for both hosts and guests.",
+      "The official currency of India is the Indian Rupee (INR). International guests can exchange currency at airports, banks, hotels, and authorized exchange centers.",
   },
+
+  {
+    question: "Can international cards be used in India?",
+    answer:
+      "Yes, most hotels, restaurants, and shopping centers accept international debit and credit cards such as Visa and Mastercard. However, carrying some cash is recommended for local markets and small vendors.",
+  },
+
+  {
+    question: "Is India safe for international wedding travelers?",
+    answer:
+      "India is a popular destination for international weddings and tourism. We recommend following standard travel precautions, using trusted transportation, and keeping copies of important travel documents.",
+  },
+
+  {
+    question: "What should guests wear for an Indian wedding?",
+    answer:
+      "Guests are welcome to wear traditional Indian outfits or elegant formal attire. Bright colors and festive clothing are commonly encouraged for Indian wedding celebrations.",
+  },
+
+  {
+    question: "Will Wi-Fi and mobile networks be available?",
+    answer:
+      "Yes, Wi-Fi is widely available in hotels, resorts, and major cities. International guests can also purchase local SIM cards for affordable mobile data and calling services.",
+  },
+
 ];
 
 const Contribution = () => {
@@ -34,7 +61,7 @@ const Contribution = () => {
   };
   return (
     <div className="faq-container">
-      <h2 className="faq-title text-center">CONTRIBUTIONS</h2>
+      <h2 className="faq-title text-center"> INTERNATIONAL GUEST GUIDE</h2>
       <div className="faq-list">
         {faqData.map((item, index) => (
           <div

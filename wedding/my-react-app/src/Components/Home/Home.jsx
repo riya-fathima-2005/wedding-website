@@ -10,6 +10,7 @@ import Ourgallery from './Ourgallery'
 import Contact from './Contact'
 import Faq from './Faq'
 import Wantwelcome from './Wantwelcome'
+import Venuedata from '../Venue/Venuedata'
 
 const Home = () => {
   return (
@@ -18,13 +19,14 @@ const Home = () => {
       <Whychoose />
       <Num /> 
       <Recently />
+      <Venuedata/>
       {/* <Upcoming /> */}
       {/* <Costumes /> */}
       
        {/* <Aboutsec /> */}
       <Ourgallery />
-      <Faq/>
-      <Wantwelcome/>
+      {/* <Faq/>
+      <Wantwelcome/> */}
       {/* <Contact /> */}
     </div>
   )

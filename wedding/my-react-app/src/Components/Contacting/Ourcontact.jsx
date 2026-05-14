@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../../assets/Style/Ourcontact.css";
-import Footer from "../Footer/Footer";
 
 function Ourcontact() {
-
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
+    phone: "",
     message: "",
   });
 
-  // Handle input change
+  // HANDLE INPUT CHANGE
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -18,121 +19,233 @@ function Ourcontact() {
     });
   };
 
-  // Handle submit
+  // HANDLE SUBMIT
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Get old data from localStorage
-    const existingData =
-      JSON.parse(localStorage.getItem("contactData")) || [];
+  emailjs.send(
+  "service_abcd123",
+  "template_xyz456",
+  {
+    fullname: formData.fullname,
+    email: formData.email,
+    phone: formData.phone,
+    message: formData.message,
+  },
+  "AbCdEF12345"
+)
 
-    // Add new form data
-    const updatedData = [...existingData, formData];
+      .then(() => {
+        alert("Message Sent Successfully!");
 
-    // Save to localStorage
-    localStorage.setItem("contactData", JSON.stringify(updatedData));
+        setFormData({
+          fullname: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      })
 
-    alert("Contact details saved successfully!");
+      .catch((error) => {
+        console.log(error);
 
-    // Clear form
-    setFormData({
-      fullname: "",
-      email: "",
-      message: "",
-    });
+        alert("Failed to Send Message");
+      });
   };
 
   return (
-    <div>
-      <div className="contact-wrapper was-validated">
+    <section className="contact-page">
+      {/* TOP AREA */}
 
-        <h1 className="contact-heading">
-          <b>Contact Us</b>
-        </h1>
+      <div className="contact-hero">
+        <div className="container">
+          <p className="hero-mini-title">WEDDING CONTACT</p>
 
-        <div className="contact-container">
-          <div className="contact-grid">
+          <h3 className="hero-title">
+            Plan Your <span>Perfect</span>
+            <br />
+            Celebration
+          </h3>
 
-            {/* Left Side: Form */}
-            <form className="contact-form" onSubmit={handleSubmit}>
+          <p className="hero-description">
+            Let us help you create timeless wedding memories filled with
+            elegance, culture, and unforgettable joy.
+          </p>
+        </div>
+      </div>
 
-              <div className="input-group">
-                <label>Full Name</label>
+      {/* CONTACT BOX */}
+
+      <div className="container contact-wrapper">
+        {/* LEFT CARD */}
+
+        <div className="contact-info-card">
+          <h4>Get In Touch</h4>
+
+          <p className="info-text">
+            We’d love to hear from you! Reach out to us for wedding planning,
+            collaborations, or inquiries.
+          </p>
+
+          {/* EMAIL */}
+
+          <div className="info-item">
+            <div className="icon-box">
+              <i className="bi bi-envelope-fill"></i>
+            </div>
+
+            <div>
+              <h5>Email Us</h5>
+
+              <a href="mailto:purewed@gmail.com">purewed@gmail.com</a>
+            </div>
+          </div>
+
+          {/* SERVICES */}
+
+          <div className="info-item">
+            <div className="icon-box">
+              <i className="bi bi-geo-alt-fill"></i>
+            </div>
+
+            <div>
+              <h5>Our Services</h5>
+
+              <p>
+                Luxury Weddings <br />
+                Destination Events <br />
+                Traditional Celebrations
+              </p>
+            </div>
+          </div>
+
+          {/* SOCIAL */}
+
+          <div className="info-item">
+            <div className="icon-box">
+              <i className="bi bi-people-fill"></i>
+            </div>
+
+          <div>
+  <h5>Follow Us</h5>
+
+  <div className="social-icons">
+
+    {/* INSTAGRAM */}
+
+    <a
+      href="https://www.instagram.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="bi bi-instagram"></i>
+    </a>
+
+    {/* FACEBOOK */}
+
+    <a
+      href="https://www.facebook.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="bi bi-facebook"></i>
+    </a>
+
+    {/* PINTEREST WEDDING DRESSES */}
+
+    <a
+      href="https://in.pinterest.com/search/pins/?q=wedding%20dress"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="bi bi-pinterest"></i>
+    </a>
+
+  </div>
+</div>
+          </div>
+        </div>
+
+        {/* RIGHT FORM */}
+
+        <div className="contact-form-card">
+          <h4>Send Us a Message</h4>
+
+          <div className="title-line"></div>
+
+          <form onSubmit={handleSubmit}>
+            <div className="double-input">
+              {/* NAME */}
+
+              <div className="input-box">
+                <i className="bi bi-person"></i>
 
                 <input
                   type="text"
                   name="fullname"
+                  placeholder="Your Full Name"
                   value={formData.fullname}
                   onChange={handleChange}
                   required
                 />
               </div>
 
-              <div className="input-group">
-                <label>E-mail</label>
+              {/* EMAIL */}
+
+              <div className="input-box">
+                <i className="bi bi-envelope"></i>
 
                 <input
                   type="email"
                   name="email"
+                  placeholder="Your Email Address"
                   value={formData.email}
                   onChange={handleChange}
                   required
                 />
               </div>
-
-              <div className="input-group">
-                <label>Message</label>
-
-                <textarea
-                  rows="3"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" className="submit-pill faq-button text-decoration-none btn-lg">
-                Contact Us
-              </button>
-
-            </form>
-
-            {/* Right Side */}
-            <div className="contact-info">
-
-              <div className="info-block">
-                <h3>Contact</h3>
-                <p>
-  <a href="mailto:purewed@gmail.com" className="text-decoration-none" style={{color:"black"}} >
-    purewed@gmail.com 
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
-</svg>
-
-  </a>
-</p>
-              </div>
-
-              <div className="info-block">
-                <h3>Based in</h3>
-                <p>
-                  Wedding Events,
-                  <br />
-                  and programs
-                </p>
-              </div>
-
-              <div className="social-icons">
-                {/* Icons */}
-              </div>
-
             </div>
 
-          </div>
+            {/* PHONE */}
+
+            <div className="input-box">
+              <i className="bi bi-telephone"></i>
+
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+
+            {/* MESSAGE */}
+
+            <div className="input-box textarea-box">
+              <i className="bi bi-pencil"></i>
+
+              <textarea
+                rows="5"
+                name="message"
+                placeholder="Write your message..."
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+
+            {/* BUTTON */}
+
+            <button type="submit" className="send-btn">
+              Send Message
+              <i className="bi bi-send-fill"></i>
+            </button>
+          </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

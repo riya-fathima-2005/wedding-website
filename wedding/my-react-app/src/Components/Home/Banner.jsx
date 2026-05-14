@@ -1,7 +1,7 @@
 import React from "react";
-import hands from "../../assets/Images/wmremove.jpeg";
-import photo from "../../assets/Images/wmremove2.jpeg";
-import nava from "../../assets/Images/Hailuo.jpeg";
+import hands from "../../assets/Images/ban4.png";
+import photo from  "../../assets/Images/ban1.png"
+import nava from "../../assets/Images/ban3.png"
 import "../../assets/Style/Banner.css";
 import Carousel from "react-bootstrap/Carousel";
 

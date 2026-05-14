@@ -23,9 +23,9 @@
 .cards-services {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  background-color:#403939 !important;
-  transition: transform 0.3s ease;
+ background: rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: none !important;
   z-index: 1;
   color: #fff;
 }
