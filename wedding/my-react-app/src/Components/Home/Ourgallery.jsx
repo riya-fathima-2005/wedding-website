@@ -14,7 +14,7 @@ const Ourgallery = () => {
       <div className="container py-5">
 
         {/* Heading */}
-        <h2 className="text-center ourgallery " style={{color:"black"}}>
+        <h2 className="text-center ourgallery " style={{color:"black", marginTop:"-120px"}}>
           Our Gallery
         </h2>
 

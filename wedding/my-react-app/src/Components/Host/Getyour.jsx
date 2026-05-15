@@ -11,7 +11,7 @@ const GetYourGuests = () => {
 
       <div className="overlay">
         <div className="overlay-content">
-          <h2 className="hero-title">Get ready to meet your guests</h2>
+          <h1 style={{marginLeft: "100px", marginBottom: "30px", fontSize: "40px", fontWeight: "bold"}}>Get ready to meet your guests!!</h1>
 
           <div className="text-center py-3">
             <Link to="/howhost" className="faq-button text-decoration-none">

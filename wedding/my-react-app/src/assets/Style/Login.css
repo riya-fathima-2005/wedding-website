@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #800000, #ff9933);
+  background: linear-gradient(135deg, #aa4141, #dcc4ad);
   font-family: "Poppins", sans-serif;
   padding: 20px;
 }
@@ -60,7 +60,7 @@
 .login-form button {
   width: 100%;
   padding: 14px;
-  background: maroon;
+  background:  #832849;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -72,7 +72,7 @@
 }
 
 .login-form button:hover {
-  background: #d4af37;
+  background: #ad7c8e;
 }
 
 .signup-text {
@@ -101,6 +101,11 @@
   background: linear-gradient(135deg, #4a7a7e, #82b1b3);
   text-align: center;
 }
+
+.loginbtn{
+  background-color:#601b34;
+}
+
 
 .login-success h2 {
   font-size: 28px;

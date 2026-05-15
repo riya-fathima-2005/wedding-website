@@ -1,13 +1,13 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
-import hostbanner from "../../assets/Images/Hailuo3.jpeg";
+import { Container } from "react-bootstrap";
+import hostbanner from "../../assets/Images/Hailuo3.png";
 import "../../assets/Style/Open.css";
 import { Link } from "react-router-dom";
 
 const Open = () => {
   return (
     <div
-      className="host-banner "
+      className="host-banner"
       style={{ backgroundImage: `url(${hostbanner})` }}
     >
       <div className="join-overlay">
@@ -17,8 +17,12 @@ const Open = () => {
               Join hands, share smiles, and welcome the world to your special
               day.
             </h2>
+
             <div className="text-center py-3">
-              <Link to="/howhost" className="faq-button text-decoration-none">
+              <Link
+                to="/howhost"
+                className="faq-button text-decoration-none"
+              >
                 Register Your Wedding
               </Link>
             </div>

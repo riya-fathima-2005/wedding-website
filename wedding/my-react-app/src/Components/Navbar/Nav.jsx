@@ -85,11 +85,11 @@ const Nav = ({ user, logout }) => {
               </NavLink>
             </li>
 
-            <li className="nav-item">
-              <NavLink to="/about" className="nav-link">
-                ABOUT US
-              </NavLink>
-            </li>
+              {/* <li className="nav-item">
+                <NavLink to="/about" className="nav-link">
+                  ABOUT US
+                </NavLink>
+              </li> */}
 
             <li className="nav-item">
               <NavLink to="/host" className="nav-link">
@@ -105,16 +105,16 @@ const Nav = ({ user, logout }) => {
 
               <NavLink
                 to="/login"
-                className="btn signup-btn px-4 "
+                style={{ color: "#fff", textDecoration: "none",paddingTop:"15px", marginBottom:"-10px" }}
               >
-                Login
+                <b>Login</b>
               </NavLink>
 
               <NavLink
                 to="/sign"
-                className="btn signup-btn px-4"
+                 style={{ color: "#fff", textDecoration: "none",paddingTop:"15px", marginBottom:"-10px" }}
               >
-                Sign Up
+               <b>Sign Up</b> 
               </NavLink>
 
             </div>

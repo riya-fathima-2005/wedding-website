@@ -18,7 +18,7 @@
   background:
     linear-gradient(
       to right,
-      rgba(255,255,255,0.88),
+      rgba(255,255,255,0.68),
       rgba(255,255,255,0.88)
     ),
     url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070");
@@ -39,8 +39,8 @@
   background:
     linear-gradient(
       to right,
-      rgba(255,255,255,0.85),
-      rgba(255,255,255,0.85)
+      rgba(255,255,255,0.65),
+      rgba(255,255,255,0.65)
     ),
     url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070");
 
@@ -140,8 +140,8 @@
   background:
     linear-gradient(
       135deg,
-      #c89b6d,
-      #b27b52
+      #916a81,
+      #75706d
     );
 
   border-radius: 50%;
@@ -266,7 +266,7 @@
 
 .input-box input:focus,
 .input-box textarea:focus {
-  border-color: #c89b6d;
+  border-color: #141413;
   background: white;
 
   box-shadow:
@@ -283,8 +283,8 @@
   background:
     linear-gradient(
       135deg,
-      #c89b6d,
-      #b27b52
+      #211e1c,
+      #211e1c
     );
 
   color: white;

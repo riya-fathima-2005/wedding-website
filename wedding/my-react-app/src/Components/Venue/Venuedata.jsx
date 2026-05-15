@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../../assets/Style/Venuedata.css";
+import wed7 from "../../assets/Images/ban4.png";
 
-function Venuedata() {
+function Venuedata({ showBanner = true }) {
 
   // VENUE DATA
 
@@ -9,10 +11,11 @@ function Venuedata() {
 
     {
       id: 1,
-      name: "Royal Palace Wedding Hall",
+      name: "Royal Palace Wed. Hall",
       location: "Jaipur",
       image:
         "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200",
+
       description:
         "Luxury royal wedding venue with traditional Indian architecture.",
     },
@@ -23,8 +26,9 @@ function Venuedata() {
       location: "Goa",
       image:
         "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200",
+
       description:
-        "Beautiful beachside destination wedding venue.",
+        "Beautiful beachside destination wedding venue with cinematic luxury vibes.",
     },
 
     {
@@ -33,6 +37,7 @@ function Venuedata() {
       location: "Kerala",
       image:
         "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=1200",
+
       description:
         "Peaceful lakeside wedding venue surrounded by nature.",
     },
@@ -43,6 +48,7 @@ function Venuedata() {
       location: "Udaipur",
       image:
         "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200",
+
       description:
         "Elegant lakeside venue perfect for luxury destination weddings.",
     },
@@ -53,6 +59,7 @@ function Venuedata() {
       location: "Kerala",
       image:
         "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200",
+
       description:
         "Romantic tropical wedding venue surrounded by palm trees.",
     },
@@ -63,6 +70,7 @@ function Venuedata() {
       location: "Delhi",
       image:
         "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200",
+
       description:
         "Spacious luxury venue ideal for grand Indian wedding celebrations.",
     },
@@ -85,13 +93,35 @@ function Venuedata() {
 
     <section className="venues-section">
 
+      {/* BANNER */}
+
+      {showBanner && (
+        <div
+          className="imagesec"
+          style={{ marginTop: "-100px", marginBottom: "70px" }}
+        >
+          <img src={wed7} alt="decor" className="decore-img" />
+
+          <h2 className="overlay-text text-white">
+            Venue
+          </h2>
+        </div>
+      )}
+
       <div className="container">
 
         {/* HEADING */}
 
-        <h1>
+        <h2
+          style={{
+            textAlign: "center",
+            marginBottom: "30px",
+            fontSize: "40px",
+            fontWeight: "bold",
+          }}
+        >
           Find Your Wedding Venue
-        </h1>
+        </h2>
 
         {/* SEARCH */}
 
@@ -128,9 +158,15 @@ function Venuedata() {
 
                 <p>{venue.description}</p>
 
-                <button>
-                  View Venue
-                </button>
+                {/* BUTTON */}
+
+                <Link to={`/morevenue${venue.id}`}>
+
+                  <button className="faq-button text-decoration-none btn-lg">
+                    View Venue
+                  </button>
+
+                </Link>
 
               </div>
 

@@ -1,37 +1,67 @@
-
- .whychoose {
-    color: #353030 !important;
-    font-family: 'Poppins', sans-serif;
+.whychoose {
+  color: #353030 !important;
+  font-family: 'Poppins', sans-serif;
 }
+
 .why-section {
   position: relative;
   margin-top: -180px;
   z-index: 20;
 }
 
-
 .whysub {
-  color: #555555 !important; 
+  color: #555555 !important;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
 }
+
 .text-center {
   text-align: center;
   margin-top: 30px;
 }
 
+.cardscar {
+  margin-top: -280px;
+}
+
+.titil-content {
+  margin-top: -120px;
+}
+
+/* CARDS */
+
 .cards-services {
   position: relative;
   overflow: hidden;
- background: rgba(0, 0, 0, 0.55) !important;
+
+  background: rgba(0, 0, 0, 0.55) !important;
   backdrop-filter: blur(8px);
+
   box-shadow: none !important;
+
   z-index: 1;
   color: #fff;
+
+  border-radius: 20px;
+
+  width: 100%;
+  max-width: 350px;
+
+  min-height: 340px;
+
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.4s ease;
+
+  animation: float 4s ease-in-out infinite;
 }
-.cardscar{
-  margin-top: -280px;
-}
+
+/* HOVER BACKGROUND EFFECT */
 
 .cards-services::before,
 .cards-services::after {
@@ -40,7 +70,7 @@
   width: 50%;
   height: 50%;
   background-color: #aca89b;
-  border-radius: inherit;
+  border-radius: 20px;
   opacity: 0;
   transition: all 0.3s linear;
   z-index: 0;
@@ -65,22 +95,32 @@
   opacity: 1;
 }
 
-.cards-services:hover {
-  transform: translateY(-8px);
-}
-.titil-content{
-  margin-top: -120px;
-}
+/* CARD CONTENT */
 
 .cards-services * {
   position: relative;
   z-index: 2;
 }
 
+.card-body {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* CARD TITLE */
+
 .card-head {
   color: white !important;
   font-family: "Poppins", sans-serif;
 }
+
+/* CARD TEXT */
 
 .card-para {
   color: #e6f1f1;
@@ -88,106 +128,13 @@
   font-size: 14px;
 }
 
-.service-icon {
-  width: 100px;
-  height: 100px;
-}
-
-/* Wrapper */
-
-.cards-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-
-  perspective: 1000px;
-
-  margin-top: 50px;
-}
-
-/* Cards */
-
-/* .cards-services {
-  position: fixed;
-
-  border-radius: 20px;
-
-  background: #3c3838 !important;
-
-  color: white;
-
-  padding: 30px 20px;
-
-  min-height: 320px;
-
-  overflow: hidden;
-
-  transition: all 0.5s ease;
-
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.15);
-
-  animation: float 4s ease-in-out infinite;
-} */
-
-/* Left Card */
-
-.col:nth-child(1) .cards-services {
-  transform: scale(0.92) rotateY(10deg);
-
-  animation-delay: 0s;
-}
-
-/* Center Card */
-
-.col:nth-child(2) .cards-services {
-  transform: scale(1.05);
-
-  z-index: 5;
-
-  animation-delay: 1s;
-}
-
-/* Right Card */
-
-.col:nth-child(3) .cards-services {
-  transform: scale(0.92) rotateY(-10deg);
-
-  animation-delay: 2s;
-}
-
-/* Floating Animation */
-
-@keyframes float {
-
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* Hover */
-
-.cards-services:hover {
-  transform: translateY(-20px) scale(1.05);
-
-  box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.25);
-}
-
-/* Icon Animation */
+/* ICON */
 
 .service-icon {
   width: 90px;
   height: 90px;
+
+  object-fit: contain;
 
   transition: all 0.5s ease;
 }
@@ -196,4 +143,28 @@
   transform: rotate(10deg) scale(1.1);
 }
 
+/* HOVER */
+
+.cards-services:hover {
+  transform: translateY(-15px);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* WRAPPER */
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  perspective: 1000px;
+
+  margin-top: 50px;
+}
+
+/* FLOATING ANIMATION */
 

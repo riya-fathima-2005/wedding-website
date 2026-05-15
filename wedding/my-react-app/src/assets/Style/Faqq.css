@@ -1,3 +1,46 @@
+/* =========================
+   HERO BANNER
+========================= */
+
+.imagesec {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.decore-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imagesec::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  z-index: 2;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   FAQ SECTION
+========================= */
+
 .faq-container {
   max-width: 900px;
   margin: 80px auto;
@@ -7,9 +50,9 @@
 
 .faq-title {
   font-size: 32px;
-  font-family: "Poppins", sans-serif;
   margin-bottom: 40px;
   color: #0d0c0c;
+  text-align: center;
 }
 
 .faq-list {
@@ -17,7 +60,6 @@
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   padding: 10px 30px;
-  font-family: "Poppins", sans-serif;
 }
 
 .faq-item {
@@ -33,28 +75,28 @@
 
 .faq-question {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
+  gap: 12px;
+  text-align: center;
+  font-size: 18px;
   font-weight: 500;
   color: #333;
-  transition: color 0.3s ease;
   font-family: "Poppins", sans-serif;
 }
 
 .arrow {
   font-size: 14px;
   transition: transform 0.3s ease;
-  margin-left: 15px;
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
+  text-align: start;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.8;
   color: #666;
   transition: max-height 0.4s ease, margin-top 0.3s ease;
+  padding: 0 20px;
 }
 
 .faq-item.open .faq-answer {
@@ -66,11 +108,20 @@
   transform: rotate(180deg);
 }
 
-.faq-item:hover .faq-question {
-  color: #0c0b0b;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 768px) {
+
+  .imagesec {
+    height: 300px;
+  }
+
+  .overlay-text {
+    font-size: 36px;
+  }
+
   .faq-title {
     font-size: 26px;
   }
@@ -82,4 +133,9 @@
   .faq-question {
     font-size: 16px;
   }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+
 }

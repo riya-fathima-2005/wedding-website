@@ -69,7 +69,7 @@ const Recently = () => {
   return (
     <div>
       <div className="container">
-        <h2 className="text-center recent">
+        <h2 className="text-center recent" style={{marginLeft: "60px", marginBottom: "30px", fontSize: "40px", fontWeight: "bold"}}>
           Choose a celebration ,Live the culture
         </h2>
         <p className="text-center mb-5 recent-para">

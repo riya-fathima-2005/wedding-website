@@ -1,10 +1,25 @@
 import React from "react";
 import david from "../../assets/Images/medium.jpg";
 import "../../assets/Style/Contactingg.css";
+import wed7 from "../../assets/Images/ban5.png"
 
 const Contactingg = () => {
   return (
-    <div className="container py-5 contact-section">
+    <div >
+
+         {/* HERO BANNER */}
+      <div className="imagesec">
+        <img src={wed7} alt="decor" className="decore-img" />
+
+        <div className="banner-overlay"></div>
+
+        <h2 className="overlay-text">
+          contact
+        </h2>
+      </div>
+     
+
+<div className="container py-5 contact-section">
       <div className="row g-4 align-items-center">
         
         <div className="col-md-6">
@@ -16,6 +31,7 @@ const Contactingg = () => {
             love to hear from you. Every message is a chance to connect cultures,
             share traditions, and create meaningful memories that go far beyond
             the ceremony itself.
+
           </p>
         </div>
 
@@ -32,6 +48,7 @@ const Contactingg = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

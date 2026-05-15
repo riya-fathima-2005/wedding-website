@@ -1,35 +1,49 @@
-import React from 'react'
-import Banner from './Banner'
-import Num from './Num'
-import Aboutsec from './Aboutsec'
-import Recently from './Recently'
-import Upcoming from './Upcoming'
-import Costumes from './Costumes'
-import Whychoose from './Whychoose'
-import Ourgallery from './Ourgallery'
-import Contact from './Contact'
-import Faq from './Faq'
-import Wantwelcome from './Wantwelcome'
-import Venuedata from '../Venue/Venuedata'
+import React from "react";
+
+import Banner from "./Banner";
+import Num from "./Num";
+import Aboutsec from "./Aboutsec";
+import Recently from "./Recently";
+import Upcoming from "./Upcoming";
+import Costumes from "./Costumes";
+import Whychoose from "./Whychoose";
+import Ourgallery from "./Ourgallery";
+import Contact from "./Contact";
+import Faq from "./Faq";
+import Wantwelcome from "./Wantwelcome";
+
+import Venuedata from "../Venue/Venuedata";
 
 const Home = () => {
   return (
     <div>
       <Banner />
+
       <Whychoose />
-      <Num /> 
+
+      <Num />
+
       <Recently />
-      <Venuedata/>
+
+      <Venuedata showBanner={false} />
+
+      <Ourgallery />
+
+      <Aboutsec />
+
       {/* <Upcoming /> */}
+
       {/* <Costumes /> */}
       
-       {/* <Aboutsec /> */}
-      <Ourgallery />
-      {/* <Faq/>
-      <Wantwelcome/> */}
-      {/* <Contact /> */}
-    </div>
-  )
-}
+      {/* <Faq /> */}
 
-export default Home
+      {/* <Wantwelcome /> */}
+
+      {/* <Contact /> */}
+
+      
+    </div>
+  );
+};
+
+export default Home;
